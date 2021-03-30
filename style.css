@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+body {
+}
+
+.main {
+    width:100%;
+}
+/* Navigation CSS */
+
+.nav_header {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: white;
+}
+.nav_list {
+    color: black;
+}
+
+/* Top View CSS */
+
+#myVideo {
+    width: 100%;
+}
+.top_view {
+    margin-bottom: 80px;
+}
+
+/* Section Title CSS */
+
+.ttl {
+  justify-content: center;
+  display: flex;
+  font-weight: bolder;
+  font-size: 25px;
+  padding: 1rem 2rem;
+  color: #fff;
+  background: gray;
+  -webkit-box-shadow: 5px 5px 0 black;
+  box-shadow: 5px 5px 0 black;
+  width: 200px;
+  margin: auto;
+}
+
+/* NAV TOGGLE */
+
+#nav-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  height: 32px;
+  cursor: pointer;
+}
+#nav-toggle > div {
+  position: relative;
+  width: 36px;
+}
+#nav-toggle span {
+  width: 100%;
+  height: 2px;
+  left: 0;
+  display: block;
+  background: #333;
+  position: absolute;
+  transition: transform 0.6s ease-in-out, top 0.5s ease;
+}
+#nav-toggle span:nth-child(1) {
+  top: 0;
+}
+#nav-toggle span:nth-child(2) {
+  top: 14px;
+}
+#nav-toggle span:nth-child(3) {
+  top: 28px;
+}
+#nav-toggle:hover span:nth-child(1) {
+  top: 4px;
+}
+#nav-toggle:hover span:nth-child(3) {
+  top: 23px;
+}
+
+.open #nav-toggle span {
+  background: #fff;
+}
+.open #nav-toggle span:nth-child(1) {
+  top: 15px;
+  transform: rotate(45deg);
+}
+.open #nav-toggle span:nth-child(2) {
+  top: 15px;
+  width: 0;
+  left: 50%;
+}
+.open #nav-toggle span:nth-child(3) {
+  top: 15px;
+  transform: rotate(-45deg);
+}
+
+/* z-index */
+#nav-toggle {
+  z-index: 1000;
+}
+
+#container {
+  z-index: 900;
+}
+
+#gloval-nav {
+  background: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 990;
+  text-align: center;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 29px;
+  opacity: 0;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#gloval-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.6s ease;
+}
+#gloval-nav a:hover {
+  color: #666;
+}
+#gloval-nav ul {
+  list-style: none;
+}
+#gloval-nav ul li {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: transform 0.6s ease, opacity 0.2s ease;
+}
+#gloval-nav ul li:nth-child(2) {
+  transition-delay: 0.15s;
+}
+#gloval-nav ul li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+#gloval-nav ul li:nth-child(4) {
+  transition-delay: 0.45s;
+}
+#gloval-nav ul li:nth-child(5) {
+  transition-delay: 0.6s;
+}
+#gloval-nav ul li:nth-child(6) {
+  transition-delay: 0.75s;
+}
+#gloval-nav ul li:nth-child(7) {
+  transition-delay: 0.9s;
+}
+
+/* open */
+.open {
+  overflow: hidden;
+}
+.open #gloval-nav {
+  visibility: visible;
+  opacity: 1;
+}
+.open #gloval-nav li {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1s ease, opacity 0.9s ease;
+}
+/* Footer CSS */
+
+footer {
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+    padding: 50px;
+}
+.copyright {
+    font-size: small;
+    margin-top: 20px;
+    text-align: center;
+}
+.social-btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.fa {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 30px;
+  width: 55px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* Youtube */
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* Image SLider CSS */
+
+.slider {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+.demo .item {
+    margin-bottom: 60px;
+  }
+  
+.content-slider li {
+    background-color: #ccc;
+    text-align: center;
+    color: #FFF;
+  }
+  
+.content-slider h3 {
+    margin: 0;
+    padding: 70px 0;
+  }
+  
+.demo {
+    width: 800px;
+  }
+
+.fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+/* Feature CSS */
+
+.feature .container {
+  margin-top: 50px;
+}
+.card {
+  box-shadow: 0 0 8px 4px #ccc;
+}
+.card:hover {
+  box-shadow: 0 0 8px 4px #666
+}
+.col-sm {
+  margin-bottom: 30px;
+  position: relative;
+  margin-left: 80px;
+}
+
+/* Contact Form CSS */
+.contact-form .ttl {
+  margin-top: 50px;
+}
+.contact-form .container {
+  margin-top: 50px;
+}
+.col-13 {
+  display: flex;
+  justify-content: center;
+}
+
